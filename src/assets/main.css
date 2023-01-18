@@ -1,0 +1,153 @@
+#app {
+  font-family: Avenir, Helvetica, Arial, sans-serif;
+  text-align: center;
+  color: #2c3e50;
+  margin-top: 60px;
+  display: flex;
+  flex-wrap: wrap;
+  width: 620px;
+  overflow: hidden;
+}
+
+.grid-item {
+  width: 200px;
+  height: 100px;
+  border: 2px solid black;
+  background: radial-gradient(
+    circle,
+    rgba(113, 81, 95, 1) 81%,
+    rgba(0, 0, 0, 1) 100%
+  );
+}
+
+.grid-item.flash {
+  animation: flash 0.5s ease-in-out infinite;
+}
+
+.grid-item.circle {
+  position: relative;
+}
+.firstCircle {
+  z-index: 999;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 30px;
+  height: 30px;
+  background-color: red;
+  border-radius: 50%;
+  animation: moveToRightBottom 5s ease-in-out;
+  animation-fill-mode: forwards;
+  opacity: 1;
+}
+.secCircle {
+  z-index: 999;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 30px;
+  height: 30px;
+  background-color: red;
+  border-radius: 50%;
+  animation: moveToDown 5s ease-in-out;
+  animation-fill-mode: forwards;
+  opacity: 1;
+}
+.thirdCircle {
+  z-index: 999;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 30px;
+  height: 30px;
+  background-color: red;
+  border-radius: 50%;
+  animation: moveToRight 5s ease-in-out;
+  animation-fill-mode: forwards;
+  opacity: 1;
+}
+.fourthCircle {
+  z-index: 999;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 30px;
+  height: 30px;
+  background-color: red;
+  border-radius: 50%;
+  animation: moveToPosition 5s ease-in-out;
+  animation-fill-mode: forwards;
+  opacity: 1;
+}
+
+.grid-item.circle::before {
+  z-index: 999;
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 30px;
+  height: 30px;
+  background-color: #a5f12b;
+  border-radius: 50%;
+  animation: moveToRightFirst 2s linear infinite;
+  opacity: 1;
+}
+
+@keyframes flash {
+  0% {
+    opacity: 0.6;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0.6;
+  }
+}
+
+@keyframes moveToRightFirst {
+  0% {
+    transform: translate(-50%, -50%);
+  }
+  100% {
+    transform: translate(500px, -50%);
+  }
+}
+@keyframes moveToRightBottom {
+  0% {
+    transform: translate(-50%, -50%);
+  }
+  100% {
+    transform: translate(490px, 235px);
+  }
+}
+@keyframes moveToDown {
+  0% {
+    transform: translate(-50%, -50%);
+  }
+  100% {
+    transform: translate(80px, 235px);
+  }
+}
+@keyframes moveToRight {
+  0% {
+    transform: translate(-50%, -50%);
+  }
+  100% {
+    transform: translate(490px, 25px);
+  }
+}
+@keyframes moveToPosition {
+  0% {
+    transform: translate(-50%, -50%);
+  }
+  100% {
+    transform: translate(80px, 25px);
+  }
+}
