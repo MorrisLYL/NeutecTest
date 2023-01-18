@@ -27,7 +27,7 @@
 .grid-item.circle {
   position: relative;
 }
-.firstCircle {
+.firstCircle, .secCircle, .thirdCircle, .fourthCircle {
   z-index: 999;
   position: absolute;
   top: 50%;
@@ -35,53 +35,22 @@
   transform: translate(-50%, -50%);
   width: 30px;
   height: 30px;
-  background-color: red;
+  background-color: #a5f12b;
   border-radius: 50%;
-  animation: moveToRightBottom 5s ease-in-out;
   animation-fill-mode: forwards;
   opacity: 1;
+}
+.firstCircle{
+  animation: moveToRightBottom 5s ease-in-out infinite;
 }
 .secCircle {
-  z-index: 999;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 30px;
-  height: 30px;
-  background-color: red;
-  border-radius: 50%;
-  animation: moveToDown 5s ease-in-out;
-  animation-fill-mode: forwards;
-  opacity: 1;
+  animation: moveToDown 5s ease-in-out infinite;
 }
 .thirdCircle {
-  z-index: 999;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 30px;
-  height: 30px;
-  background-color: red;
-  border-radius: 50%;
-  animation: moveToRight 5s ease-in-out;
-  animation-fill-mode: forwards;
-  opacity: 1;
+  animation: moveToRight 5s ease-in-out infinite;
 }
 .fourthCircle {
-  z-index: 999;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 30px;
-  height: 30px;
-  background-color: red;
-  border-radius: 50%;
-  animation: moveToPosition 5s ease-in-out;
-  animation-fill-mode: forwards;
-  opacity: 1;
+  animation: moveToPosition 5s ease-in-out infinite;
 }
 
 .grid-item.circle::before {
@@ -124,7 +93,7 @@
     transform: translate(-50%, -50%);
   }
   100% {
-    transform: translate(490px, 235px);
+    transform: translate(488px, 233px);
   }
 }
 @keyframes moveToDown {
